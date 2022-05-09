@@ -1,3 +1,5 @@
+import math
+
 from entropy import calc_entropy
 from preparation import count_occurences
 
@@ -14,12 +16,21 @@ def info_gain(entropy_result, info_function_result):
     return entropy_result - info_function_result
 
 
-def split_info():
-    # tutaj robimy obliczenia z ogólnego wzoru na entropię
-    counter = 0
+def split_info(data):
+    occ = count_occurences(data)
+    atr_entropy = []
+    for i in range(len(occ) - 1):
+        atr_entropy.append(calc_entropy(data[i]))
+    return atr_entropy
 
 
-def gain_ratio():
-    # to takie ekstra+ ale warto dodać ze względu na jakieś tam dysproporcje w wartościach atrybutów, czy coś XD
-    # GainRatio(X,T)=Gain(X,T)/SplitInfo(X,T)
-    counter = 0
+
+
+
+def gain_ratio(gain, split, data):
+    #ratio = []
+    #occ = count_occurences(data)
+    #for i in range(len(occ)):
+
+
+    return gain/split
