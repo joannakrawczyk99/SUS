@@ -21,5 +21,5 @@ if __name__ == "__main__":
     split_inf = split_info(data)
     print(split_inf)
 
-    #ratio = gain_ratio(gain, split_inf)
-    #print(ratio)
+    ratio = gain_ratio(gain, split_inf, data)
+    print(ratio)

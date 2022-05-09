@@ -24,13 +24,9 @@ def split_info(data):
     return atr_entropy
 
 
-
-
-
 def gain_ratio(gain, split, data):
-    #ratio = []
-    #occ = count_occurences(data)
-    #for i in range(len(occ)):
-
-
-    return gain/split
+    ratio = []
+    occ = count_occurences(data)
+    for i in range(len(occ) - 1):
+        ratio.append(gain/split[i])
+    return ratio
